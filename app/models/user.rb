@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-	has_many :user_chatroom
-	has_many :genre, through: :user_chatroom
+	has_many :user_chatrooms
+	has_many :genres, through: :user_chatrooms
 
 	has_secure_password
 end

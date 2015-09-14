@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Chatroom.create(name:"hip-hop")
+Chatroom.create(name:"trap")
+Chatroom.create(name:"underground")
+Chatroom.create(name:"R&B")
