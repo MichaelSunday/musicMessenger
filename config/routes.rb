@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'genres/index' => 'genres#index', as: :home_page
 
-  get 'genres/show'
+  get 'genres/show' => 'genres#show'. as: :messages
 
 
 
