@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
-  get 'genres/index'
-
-  get 'genres/show'
 
   get '/' => 'sessions#new', as: :new_session
   get 'users/new' => 'users#new', as: :new_user
   post 'users/' => 'sessions#create', as: :create_session
   post 'users/' => 'users#create'
+
+  get 'genres/index' => 'genres#index', as :home_page
+
+  get 'genres/show'
+
+
+
+
+
 
   get 'sessions/create'
 
