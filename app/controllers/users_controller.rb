@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
 		if @user.save
 			flash[:success] = "Welcome!"
-			redirect_to messages_path
+			# redirect_to messages_path
 		else
 			render 'new'
 		end

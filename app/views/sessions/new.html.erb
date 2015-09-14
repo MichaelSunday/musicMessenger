@@ -1,2 +1,18 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div> Login </div>
+
+<%= form_for @user do |f| %>
+
+    <% flash.each do |key,value|  %>
+        <div class="<%= key %>" > <%= value %> </div>
+    <% end %>
+
+
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit "asd" %>
+
+<% end %>
