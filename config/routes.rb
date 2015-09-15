@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   get '/' => 'sessions#new', as: :new_session
   get 'users/new' => 'users#new', as: :new_user
   post 'users/' => 'sessions#create', as: :create_session
@@ -10,6 +11,11 @@ Rails.application.routes.draw do
   get 'chatrooms/:id' => 'chatrooms#show', as: :chatroom
 
 
+  get 'messages/index'
+
+  get 'messages/new'
+
+  get 'messages/create'
 
 
 
