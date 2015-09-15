@@ -2,7 +2,12 @@
 <h1><%= @chatroom.name %></h1>
 	<% @messages.each do |message| %>
 		<% if message.body %>
-			<h3><%= User.find(message.user_id).name %>: <%= message.body %></h3>
+			<h3><%= User.find(message.user_id).name %>: <%= message.body %></h3>	
     		<% end %>
     <% end %>
-
+<%= form_for :message, url: create_message_path do |f| %>
+<%= f.text_area :body %>
+<%= f.hidden_field :user_id,:value => @user_id %>
+<%= f.hidden_field :chatroom_id,:value => @chatroom.id %>
+<%= f.submit "Send Message" %>
+<% end %>

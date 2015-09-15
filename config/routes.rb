@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get 'chatrooms/:id' => 'chatrooms#show', as: :chatroom
 
+  post 'chatrooms/:id' => 'messages#new', as: :create_message
+
 
   get 'messages/index'
 

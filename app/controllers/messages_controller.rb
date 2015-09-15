@@ -1,12 +1,15 @@
 class MessagesController < ApplicationController
-
-  def new
-    @message = @chatroom.messages.new
+   def new
+  	body = (params[:message][:body])
+  	user_id = params[:message][:user_id]
+  	chatroom_id = params[:message][:chatroom_id]
+  	user = User.find(user_id)
+  	chatroom = Chatroom.find(chatroom_id)
+  	Message.create({body: body, user: user, chatroom: chatroom})
+  	redirect_to chatroom_path(chatroom)
   end
+
 
   def create
-    @message = @chatroom.messages.new(message_params)
-    if @message.save
-      redirect_to chatroom_path(@chatroom)
-    end
   end
+end
