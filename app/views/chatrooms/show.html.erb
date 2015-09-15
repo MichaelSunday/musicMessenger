@@ -1,2 +1,5 @@
-<h1>Genres#show</h1>
-<p>Find me in app/views/genres/show.html.erb</p>
+
+<h1><%= @chatroom.name %></h1>
+		<% @messages.each do |message| %>
+			<h3><%= User.find(message.user_id).name %>: <%= message.body %></h3>
+		<% end %>

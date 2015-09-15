@@ -5,11 +5,10 @@
 <div class="row">
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="http://s0.hulkshare.com/song_images/original/2/9/d/29d5fc3f45b83473fc7f59f181003f57.jpg?dd=1388552400" alt="...">
+      <img src="<%=chatroom.image%>" alt="...">
       <div class="caption">
         <h3><%=chatroom.name%></h3>
-        <p>Hip hop music, also called hip-hop or rap music, is a music genre consisting of a stylized rhythmic music that commonly accompaniesrapping, a rhythmic and rhyming speech that is chanted. It developed as part of hip hop culture, a subculture defined by four key stylistic elements:MCing/rapping, DJing/scratching, break dancing, and graffiti writing. Other elements include sampling (or synthesis), and beatboxing.
-    While often used to refer to rapping, "hip hop" more properly denotes the practice of the entire subculture. The term hip hop music is sometimes used synonymously with the term rap music, though rapping is not a required component of hip hop music; the genre may also incorporate other elements of hip hop culture, including DJing, turntablism, and scratching, beatboxing, and instrumental tracks.</p>
+        <p><%=chatroom.description%></p>
         <%= link_to "Chat Now!", chatroom_path(chatroom) %>
       </div>
     </div>
