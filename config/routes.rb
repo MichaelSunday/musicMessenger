@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   get '/' => 'sessions#new', as: :new_session
   get 'users/new' => 'users#new', as: :new_user
-  post 'users/' => 'sessions#create', as: :create_session
-  post 'users/' => 'users#create'
+  post 'users/login' => 'sessions#create', as: :create_session
+  post 'users/create' => 'users#create', as: :users
 
   get 'chatrooms/index' => 'chatrooms#index', as: :home_page
 

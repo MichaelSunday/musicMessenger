@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
+
 gem 'bootstrap-sass', '~> 3.3.5'
 
 gem 'bcrypt', '~> 3.1.7'
