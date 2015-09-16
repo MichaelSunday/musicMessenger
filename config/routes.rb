@@ -12,9 +12,9 @@ Rails.application.routes.draw do
 
   post 'chatrooms/:id' => 'messages#new', as: :create_message
 
-  delete 'messages/:id' => 'messages#destroy'
+  delete 'messages/:id' => 'messages#destroy', as: :destroy_message
 
-  patch "messages/:id" => "messages#update"
+  patch "messages/:id" => "messages#update", as: :edit_message
 
   get 'messages/index'
 
