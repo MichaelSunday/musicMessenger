@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
     @message = Message.find(params[:id])
     chatroom = @message.chatroom
     @message.destroy
-    redirect_to chatroom_path()
+    redirect_to chatroom_path(chatroom)
   end
 
   def edit
@@ -25,12 +25,14 @@ class MessagesController < ApplicationController
   end
 
   def update
-    @message = Message.find(params[:id])
-
-    if @message.update_attributes(message_params)
-      redirect_to chatroom_path
+    message = Message.find(params[:id])
+    new_body = params[:message][:body]
+    message.body = new_body
+    chatroom = message.chatroom
+    if message.save
+      redirect_to chatroom_path(chatroom)
     else
-      render :edit
+      #render :edit
     end
   end
 end

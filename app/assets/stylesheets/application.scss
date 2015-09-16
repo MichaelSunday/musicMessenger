@@ -17,3 +17,10 @@
 @import "bootstrap";
 @import "users";
 @import "semantic-ui";
+
+.edit-button {
+	cursor: pointer;
+}
+.textBox.editable {
+border: none;	
+}

@@ -27,8 +27,10 @@ $(document).ready(function () {
     $('.saveButton').hide();
 
     $('.edit-button').click(function() {
-
-    	$(this).parent().child('.editable').removeAttr('disabled');
+    	console.log('yooooo')
+    	console.log($(this).parent().find('.editable').removeAttr('disabled'));
+    	$(this).parent().find('.editable').removeAttr('disabled');
+    	$(this).parent().find('.saveButton').show();
     });
 
     
