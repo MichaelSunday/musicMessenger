@@ -11,26 +11,27 @@
             <div class="item">
               <i class="right triangle icon"><strong><%= user.name %></strong></i>            
             </div>
-            	<%= message.body %>
+            	<%= message.body %><%= link_to "Delete", create_message_path, method: :delete, data: { confirm: "Positive!?"} %> <%= link_to "Edit" %> 
+            	<p><%= message.id %></p>
           </div>
         </div>
       </div>
     <% end %>
   <% end %>
 </div>
-<%= form_for :message, url: create_message_path do |f| %>
 
+<%= form_for :message, url: create_message_path do |f| %>
 <%= f.hidden_field :user_id,:value => @user_id %>
 <%= f.hidden_field :chatroom_id,:value => @chatroom.id %>
 
 <div class="panel-footer">
-                    <div class="input-group">
-                        <input id="btn-input" type="text" class="form-control input-sm"  <%= f.text_area :body %> 
-                        <span class="input-group-btn">
-                            <button class="btn btn-warning btn-sm" id="btn-chat">
-                                <%= f.submit "Send Message" %></button>
-                        </span>
-                    </div>
-                </div>
+	<div class="input-group">
+        <input id="btn-input" type="text" class="form-control input-sm"  <%= f.text_area :body %> 
+            <span class="input-group-btn">
+                <button class="btn btn-warning btn-sm" id="btn-chat">
+                    <%= f.submit "Send Message" %></button>
+            </span>
+	</div>
+</div>
 <% end %>
 

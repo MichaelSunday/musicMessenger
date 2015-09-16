@@ -12,4 +12,24 @@ class MessagesController < ApplicationController
 
   def create
   end
+
+  def destroy
+    @message = Message.find(params[:id])
+    @message.destroy
+    redirect_to create_message_path
+  end
+
+  def edit
+    @message = Message.find(params[:id])
+  end
+
+  def update
+    @message = Message.find(params[:id])
+
+    if @message.update_attributes(message_params)
+      redirect_to create_message_path
+    else
+      render :edit
+    end
+  end
 end

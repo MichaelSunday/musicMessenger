@@ -1,6 +1,7 @@
 class ChatroomsController < ApplicationController
   def index
   	@chatrooms = Chatroom.all
+  	@users = User.all
   	# @messages = @chatroom.messages
   end
 
