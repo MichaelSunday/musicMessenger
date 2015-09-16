@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150914215403) do
+ActiveRecord::Schema.define(version: 20150916232912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,16 @@ ActiveRecord::Schema.define(version: 20150914215403) do
 
   add_index "user_chatrooms", ["user_id"], name: "index_user_chatrooms_on_user_id", using: :btree
 
+  create_table "user_messages", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "message_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "user_messages", ["message_id"], name: "index_user_messages_on_message_id", using: :btree
+  add_index "user_messages", ["user_id"], name: "index_user_messages_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -55,4 +65,6 @@ ActiveRecord::Schema.define(version: 20150914215403) do
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
   add_foreign_key "user_chatrooms", "users"
+  add_foreign_key "user_messages", "messages"
+  add_foreign_key "user_messages", "users"
 end
