@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem "auto_html"
+
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 
 gem 'bootstrap-sass', '~> 3.3.5'
