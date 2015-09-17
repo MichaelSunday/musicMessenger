@@ -26,5 +26,32 @@ border: none;
 }
 
 .row {
-	display: inline-block;
+	display: inline;
+}
+
+.containerLog {
+position: absolute;
+width: 100%;
+top: 0;
+display: inline-block;
+padding: 10px;
+
+
+}
+.right {
+position: absolute;
+top: 50px;
+right: 10px;
+
+
+}
+.left {
+position: absolute;
+top: 50px;
+left: 10px;
+
+}
+
+.white {
+	color: white;
 }

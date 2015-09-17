@@ -3,8 +3,9 @@
 <script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
 
 <!--Video Section-->
+
 <section class="content-section video-section">
-  <div class="pattern-overlay">
+  <div class="pattern-overlay" style="height: 100vh">
   <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=suWVFopR6BU',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1, startAt: 31}">bg</a>
     <div class="container">
       <div class="row">
@@ -16,13 +17,15 @@
     </div>
   </div>
 </section>
+
 <!--Video Section Ends Here-->
 
+<div class="containerLog"> 
+  <h2 class="white"><span style="float: left">Ready Hip-Hop Heads?</span> <span style="float: right">Hip-Hop Heads! Want to get Started?</span></h2> 
 
-
-<div class="container">
-  <h2>Ready Hip-Hop Heads?</h2>
-  <!-- Trigger the modal with a button -->
+<div class="left">
+<!--   <h2>Ready Hip-Hop Heads?</h2>
+ -->  <!-- Trigger the modal with a button -->
   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login!</button>
 
   <!-- Modal -->
@@ -36,13 +39,13 @@
           <h4 class="modal-title">Login</h4>
         </div>
         <div class="modal-body">
-        	<%= form_for @user, url: create_session_path do |f| %>
-         	<%= f.label :email %>
-    		<%= f.email_field :email %>
-   			<%= f.label :password %>
-    		<%= f.password_field :password %>
-    		<%= f.submit "Enter" %>
-    		<% end %>
+        <%= form_for @user, url: create_session_path do |f| %>
+          <%= f.label :email %>
+     <%= f.email_field :email %>
+     <%= f.label :password %>
+     <%= f.password_field :password %>
+     <%= f.submit "Enter" %>
+    <% end %>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -53,11 +56,12 @@
   </div>
   
 </div>
+</div>  
 
-
-<div class="container">
-  <h2>Hip-Hop Heads! Want To Get Started?</h2>
-  <!-- Trigger the modal with a button -->
+<div class="containerLog">
+<div class="right">
+<!--   <h2 style="float: right">Hip-Hop Heads! Want To Get Started?</h2>
+ -->  <!-- Trigger the modal with a button -->
   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#createAccount">Creat Account!</button>
 
   <!-- Modal -->
@@ -95,6 +99,8 @@
       
     </div>
   </div>
+
+</div> <!-- end of containerLog -->
   
 </div>
 
