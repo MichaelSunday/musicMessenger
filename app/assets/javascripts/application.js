@@ -26,11 +26,14 @@ $(document).on("ready page:load", function () {
 
     $('.saveButton').hide();
 
+    $('.textBox.editable').hide();
+
     $('.edit-button').click(function() {
     	console.log('yooooo')
     	console.log($(this).parent().find('.editable').removeAttr('disabled'));
     	$(this).parent().find('.editable').removeAttr('disabled');
     	$(this).parent().find('.saveButton').show();
+    	$(this).parent().find('.textBox.editable').show();
     });
 
     

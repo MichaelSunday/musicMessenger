@@ -13,7 +13,7 @@
             </div>
             <div>
             	<%= form_for :message, url: edit_message_path(message), method: :patch do |f| %>
-            		<%= f.text_field :body, class: "textBox editable", value: message.body %>
+            		<%= f.text_field :body, class: "textBox editable", value: (message.body) %>
             		<%= f.submit "Save", class: "saveButton" %>
             	<% end %>
             		<% if @user_id === message.user.id %>
@@ -26,7 +26,11 @@
             			</a>
             		<% end %>
               <p><%= message.id %></p>
-              <%= embed(message.body) %>
+              <!--<%= embed(message.body) %>
+            -->
+            <%= auto_html(message.body) { youtube; soundcloud; simple_format; link(:target => 'blank') } %>
+            
+
 
 
           </div>
