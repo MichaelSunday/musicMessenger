@@ -19,7 +19,7 @@
 //= require semantic-ui/modal
 //= require semantic-ui/dropdown
 
-$(document).ready(function () {
+$(document).on("ready page:load", function () {
 
 
     $('.textBox').attr('disabled', 'disabled');
