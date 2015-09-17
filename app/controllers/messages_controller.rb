@@ -35,4 +35,9 @@ class MessagesController < ApplicationController
       #render :edit
     end
   end
+
+  def like
+    
+  end
+
 end
