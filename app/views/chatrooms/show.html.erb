@@ -1,8 +1,13 @@
-<div class="header">
-  <h2 class="font big leftIndex"><%= @chatroom.name %></h1>
-  <h2 class="font big rightIndex"><%= @user.name %></h2>
+<div class="header ground">
+  <h2 class="white font big leftIndex"><%= @chatroom.name %></h1>
+  <h2 class="white font big rightIndex"><%= @user.name %></h2>
+  <div class="centerlist font medium">
+    <%= link_to "Back To Genres!", home_page_path %>
+  </div>  
 </div>  
-	<div class="ui segment">
+
+  <div class="ui segment">
+
   <% @messages.each do |message| %>
     <% if message.body %>
       <% user = User.find(message.user_id) %>
@@ -43,6 +48,7 @@
           </div>
         </div>
       </div>
+
     <% end %>
   <% end %>
 </div>
