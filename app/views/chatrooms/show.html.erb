@@ -1,5 +1,7 @@
-
-<h1><%= @chatroom.name %></h1>
+<div class="header">
+  <h2 class="font big leftIndex"><%= @chatroom.name %></h1>
+  <h2 class="font big rightIndex"><%= @user.name %></h2>
+</div>  
 	<div class="ui segment">
   <% @messages.each do |message| %>
     <% if message.body %>
@@ -13,9 +15,8 @@
             </div>
             <div>
             	<%= form_for :message, url: edit_message_path(message), method: :patch do |f| %>
-                <div class="panel panel-default">
-            		<%= f.text_field :body, class: "textBox editable", value: (message.body) %>
-            		<%= f.submit "Save", class: "saveButton" %>
+            		    <%= f.text_field :body, class: "textBox editable", value: (message.body) %>
+            		    <%= f.submit "Save", class: "saveButton" %>
             	<% end %>
             		<% if @user_id === message.user.id %>
             			<%= link_to destroy_message_path(message), method: :delete, data: { confirm: "Positive!?"} do %>
@@ -28,10 +29,13 @@
             			<i class="diamond icon"></i>
             			</a>
             		<% end %>
-              <p><%= message.id %></p>
               <!--<%= embed(message.body) %>
             -->
-            <%= auto_html(message.body) { youtube; soundcloud; simple_format; link(:target => 'blank') } %>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <%= auto_html(message.body) { youtube; soundcloud; simple_format; link(:target => 'blank') } %>
+              </div>
+            </div>
             
 
 

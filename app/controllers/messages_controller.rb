@@ -37,7 +37,6 @@ class MessagesController < ApplicationController
   end
 
   def like
-    foo = true
   end
 
 end
