@@ -63,7 +63,7 @@
 </div>
 
 <div class="containerLog">
-<div class="right">
+<div class="rightR">
 <!--   <h2 style="float: right">Hip-Hop Heads! Want To Get Started?</h2>
  -->  <!-- Trigger the modal with a button -->
   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#createAccount">Creat Account!</button>
@@ -83,16 +83,20 @@
           <div class="form-group">
     		    <%= f.label :name %>
     		    <%= f.text_field :name, class: "form-control" %>
+          </div>
           <div class="form-group">
     		    <%= f.label :email %>
     		    <%= f.email_field :email, class: "form-control" %>
+          </div>
           <div class="form-group">
     		    <%= f.label :password %>
     		    <%= f.password_field :password, class: "form-control" %>
+          </div>
 
           <div class="form-group">
     		    <%= f.label :password_confirmation %>
     		    <%= f.password_field :password_confirmation, class: "form-control" %>
+          </div>
 
     		<%= f.submit "Register" %>
     	<% end %>

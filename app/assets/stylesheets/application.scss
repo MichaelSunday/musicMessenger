@@ -35,7 +35,7 @@ padding: 10px;
 
 
 }
-.right {
+.rightR {
 position: absolute;
 top: 50px;
 right: 10px;
@@ -100,6 +100,32 @@ margin: 50px auto;
 	background: url(http://westcheddar.files.wordpress.com/2008/10/midnightmarauders217.jpg)
 }
 
+.font {
+	font-family: 'Indie Flower', cursive;
+}
 
+.big {
+	font-size: 70px
+}
+
+.header {
+	display: inline-block;
+	width: 100%;
+}
+
+.leftIndex {
+display: inline-block;
+top: 0;
+left: 10px;
+line-height: 1.5em;
+}
+
+.rightIndex {
+display: inline-block;
+top: 0;
+right: 10px;
+float: right;
+line-height: 1.5em;
+}
 
 
