@@ -1,10 +1,10 @@
 <h1>Genres</h1>
 
 <h2><%= @user.name %></h2>
-<div class="row">
+<div class="wrapper">
 <% @chatrooms.each do |chatroom| %>
   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
+    <div class="column">
       <img src="<%=chatroom.image%>" alt="...">
       <div class="caption">
         <h3><%=chatroom.name%></h3>
