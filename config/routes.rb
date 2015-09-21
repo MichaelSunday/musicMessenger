@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
 
+namespace :api do
+      resources :chatrooms, only: [:index, :show, :create, :update, :destory]
+  end
+
+
+
   get '/' => 'sessions#new', as: :new_session
   get 'users/new' => 'users#new', as: :new_user
   post 'users/login' => 'sessions#create', as: :create_session
