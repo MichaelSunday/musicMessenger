@@ -2,7 +2,7 @@
 Project 2
 
 Trello Link: https://trello.com/b/JQ3QT8Dz/musicmessenger
-Link To Messenger Website: http://morning-bayou-5750.herokuapp.com/
+Link To Messenger Website: http://music-messenger.herokuapp.com
 
 ### Technology
 

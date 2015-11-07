@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 
 namespace :api do
-      resources :chatrooms, only: [:index, :show, :create, :update, :destory]
+      resources :chatrooms, only: [:index, :show, :create, :update, :destroy]
   end
 
 
